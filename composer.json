@@ -1,0 +1,5 @@
+{
+    "require": {
+        "ptcong/php-image-uploader": "6.0"
+    }
+}
