@@ -1,0 +1,41 @@
+<html>
+<head>
+	<title>Imgur JS Uploader</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css" />
+</head>
+<body>
+	<div class="w3-container w3-teal">
+	  	<h1>Imgur JS Uploader</h1>
+	  	
+	</div>
+	<ul class="w3-navbar w3-black">
+		  	<li><a href="#">Home</a></li>
+		  	<li><a href="#">Simple example</a></li>
+		  	<li><a href="#">Advanced example</a></li>
+		</ul>
+	<div class="w3-container">
+		<h3>Add an image HTML input easily and upload it to a free service like imgur</h3>
+		<p>Use it in forms, only add the input and it will store the url of the image</p>
+		<h4>When creating</h4>
+		<form method="get">
+			<input id="image" class="image" type="text" />
+			<input type="submit" />
+		</form>
+		<h4>When loading the input</h4>
+		<form method="get">
+			<input id="image" class="image" type="text" value="http://i.imgur.com/v2XEjln.jpg" />
+			<input type="submit" />
+		</form>
+	</div>
+	<footer class="w3-padding-16 w3-teal w3-center">
+		Library maintened by <a href="http://www.weblabor.mx">Weblabor</a> in Tuxtla Gutierrez, Chiapas, México
+	</footer>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script type="text/javascript" src="imgur-js-uploader.js"></script>
+	<script type="text/javascript">
+		$('.image').imgurUploader();
+	</script>
+</body>
+</html>
