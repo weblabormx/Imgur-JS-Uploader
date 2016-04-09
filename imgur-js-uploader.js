@@ -1,17 +1,17 @@
 (function( $ ){
 	
 	$.fn.imgurUploader = function() {
-		
+		var cont=0;
 		return this.each(function() {
 			$(this).hide();
-			
+			cont++;
 			var gthis = this;
-			var randomName = Math.random().toString(36).substr(2, 5);
+			var randomName = cont;
 			$('<input type="file" id="imgur'+randomName+'" class="imguruploader-file">').insertAfter(this);
 			if ($(this).val().length>0) {
 				$('<div class="imguruploader-viewer" id="imgurv'+randomName+'"><img src="'+$(this).val()+'" /></div>').insertAfter(this);
 			};
-			$('#imgur'+randomName).on('change', function(){   
+			$('#imgur'+randomName).on('change', function(){ 
 			    var data = new FormData();
 			    data.append('image', $('#imgur'+randomName).prop('files')[0]);
 			    $.ajax({
@@ -35,12 +35,7 @@
 			  	}); 
 			});
 			return true;
- 
 		});
- 
 	};
 	
 })( jQuery );
-
-
-//console.log(obj.element.getAttribute("data-type"));
