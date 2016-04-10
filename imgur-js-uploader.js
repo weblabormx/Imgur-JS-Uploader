@@ -19,7 +19,7 @@
 			        processData: false, // important
 			        contentType: false, // important
 			        data: data,
-			        url: 'includes/uploader.php'
+			        url: 'http://weblabor.mx/imgur-js-uploader/includes/uploader.php'
 			    }).done(function(url) {
 				    
 				    if ($(gthis).val().length>0) {
