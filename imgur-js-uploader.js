@@ -13,15 +13,16 @@
 			};
 			$('#imgur'+randomName).on('change', function(){ 
 			    var data = new FormData();
-			    data.append('image', $('#imgur'+randomName).prop('files')[0]);
+			    data.append('file', $('#imgur'+randomName).prop('files')[0]);
 			    $.ajax({
 			        type: 'POST',               
 			        processData: false, // important
 			        contentType: false, // important
 			        data: data,
 			        url: 'http://weblabor.mx/imgur-js-uploader/includes/uploader.php'
-			    }).done(function(url) {
-				    
+			    }).done(function(data) {
+				    var object = jQuery.parseJSON(data);
+				    var url = object->link;
 				    if ($(gthis).val().length>0) {
 				    	$('#imgurv'+randomName).find('img').attr('src',url);
 				    } else {
