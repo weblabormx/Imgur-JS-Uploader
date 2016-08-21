@@ -22,7 +22,7 @@
 			        url: 'http://weblabor.mx/imgur-js-uploader/includes/uploader.php'
 			    }).done(function(data) {
 				    var object = jQuery.parseJSON(data);
-				    var url = object->link;
+				    var url = object.link;
 				    if ($(gthis).val().length>0) {
 				    	$('#imgurv'+randomName).find('img').attr('src',url);
 				    } else {
