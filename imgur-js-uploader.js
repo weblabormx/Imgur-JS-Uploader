@@ -19,7 +19,7 @@
 			        processData: false, // important
 			        contentType: false, // important
 			        data: data,
-			        url: 'http://weblabor.mx/imgur-js-uploader/includes/uploader.php'
+			        url: 'http://libraries.weblabor.mx/imgur-js-uploader/uploader.php'
 			    }).done(function(data) {
 				    var object = jQuery.parseJSON(data);
 				    var url = object.link;
